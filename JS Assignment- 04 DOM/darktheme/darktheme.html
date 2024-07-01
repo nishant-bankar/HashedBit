@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Theme</title>
+  <style>
+    .day {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .night {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    .button_day {
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    .button_night {
+      background-color: #000000;
+      color: #ffffff;
+    }
+
+    button {
+      padding: 10px 20px;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app" class="day">
+    <p>I am a HashedBit student, ready to become an awesome full stack developer</p>
+    <button id="swap" class="button_day" onclick="swapTheme()">Swap Theme</button>
+  </div>
+
+  <script>
+    function swapTheme() {
+      var app = document.getElementById('app');
+      var button = document.getElementById('swap');
+      
+      if (app.classList.contains('day')) {
+        app.classList.remove('day');
+        app.classList.add('night');
+        button.classList.remove('button_day');
+        button.classList.add('button_night');
+      } else {
+        app.classList.remove('night');
+        app.classList.add('day');
+        button.classList.remove('button_night');
+        button.classList.add('button_day');
+      }
+    }
+  </script>
+</body>
+</html>
