@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.movie-item:hover {
+  transform: scale(1.05);
+}
+
+.movie-item img {
+  width: 100%;
+  border-radius: 8px;
+}
